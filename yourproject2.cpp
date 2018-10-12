@@ -15,8 +15,6 @@ int main(int argc, char **argv)
 	string yes = "/final.peak";
 	string filenameinput =filename+studentID+matrix;
 	string filenameoutput =filename+studentID+yes;
-	string input;
-    string output;
 	ifstream fileinput;
 	ofstream fileoutput;
 	fileinput.open(filenameinput.c_str()); 
