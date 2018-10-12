@@ -12,9 +12,9 @@ int main(int argc, char **argv)
     string filename = "./";
 	string studentID = argv[1];
 	string matrix = "/matrix.data";
-	string yes = "/final.peak";
+	string final = "/final.peak";
 	string filenameinput =filename+studentID+matrix;
-	string filenameoutput =filename+studentID+yes;
+	string filenameoutput =filename+studentID+final;
 	ifstream fileinput;
 	ofstream fileoutput;
 	fileinput.open(filenameinput.c_str()); 
@@ -31,15 +31,6 @@ int main(int argc, char **argv)
 					fileinput>>read;
 					array[i][j]	= read;
 				}
-			for(int i = 0; i< row; i++)
-			{
-				for(int j = 0; j< column; j++ )
-				{
-					int read;
-			        cout<<array[i][j]<<" ";
-				}
-				cout<<endl;
-		    }
 		    int space;
 			fileinput>>space;
 		}
@@ -66,15 +57,12 @@ int main(int argc, char **argv)
 		for(int i = 0; i < ans; i++ )
 		{
 			fileoutput<<a[i]<<" ";
-			cout<<a[i]<<" "; 
 			if(i % 2 == 1)
 			{
 				fileoutput<<endl;
-				cout<<endl;
 			}
 		}			
 		fileoutput.close();		
 	}
 	return 0;
-
 }
